@@ -1,0 +1,58 @@
+name: PositionalTeleportPlugin
+version: 0.1
+main: com.backslide999.positionalteleport.PositionalTeleportPlugin
+api-version: 1.13
+authors: [Backslide999]
+description: Used for teleporting to specific coordinates/worlds
+depend: [Essentials]
+softdepend: [WorldBorder]
+
+commands:
+
+  tppos:
+    description: Teleports user to given coordinates/world
+    aliases: [tpp]
+    permission: tppos.teleport
+    permission-message: §cYou do not have permission to use that command!
+    usage: §9/tppos help
+
+permissions:
+
+  tppos.user:
+    description: Grants access to general tppos commands
+    default: op
+    children:
+      tppos.teleport: true
+      tppos.worlds: true
+
+  tppos.admin:
+    description: Grants access to advances tppos commands
+    default: false
+    children:
+      tppos.teleport.worlds: true
+      tppos.teleport.worlds.all: true
+      tppos.reload: true
+
+  tppos.teleport:
+    description: Teleports user to given coordinates
+    default: op
+
+  tppos.teleport.worlds:
+    description: Allows teleportation to different worlds. User still needs permission per server.
+    default: op
+
+  tppos.teleport.worlds.all:
+    description: Grants user rights to teleport to all worlds.
+    default: op
+
+  tppos.worlds:
+    description: Grants access to list all worlds
+    default: op
+
+  tppos.reload:
+    description: Allows reloading of plugin
+    default: op
+
+  tppos.api.worldborder.override:
+    description: Can teleport outside world border
+    default: false

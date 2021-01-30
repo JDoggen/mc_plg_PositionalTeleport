@@ -1,0 +1,35 @@
+teleport:
+  x:
+    use: false
+    min: 0
+    max: 0
+  y:
+    use: true
+    min: 2
+    max: 256
+  z:
+    use: false
+    min: 0
+    max: 0
+  mode: SAFE
+
+api:
+  worldborder: true
+
+messages:
+  prefix: true
+  teleporting: Teleporting...
+  help:
+    - /tppos <mode> x y z <world>
+  reload_successful: Reloading succesfull
+  errors:
+    no_command_line: Command cannot be called from command line
+    unauthorized: You're not allowed to use that command
+    not_allowed_world: You're not allowed to teleport between worlds
+    not_allowed_world_specific: You're not allowed to teleport to that world
+    world_not_exists: That world does not exist
+    x_incorrect: X coordinate must be between {0} and {1}
+    y_incorrect: Y coordinate must be between {0} and {1}
+    z_incorrect: Z coordinate must be between {0} and {1}
+    destination_not_safe: Destination is not safe
+    outside_border: Position is outside of worldborder
