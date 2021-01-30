@@ -1,3 +1,7 @@
+# Dirs
+/out
+/target
+
 # Compiled class file
 *.class
 
